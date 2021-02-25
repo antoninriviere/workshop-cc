@@ -2,6 +2,10 @@ gsap.registerPlugin(ScrollTrigger)
 
 window.addEventListener('DOMContentLoaded', (event) => {
 	console.log('page ready')
+  window.setTimeout(() => {
+    document.body.classList.add('loaded')
+  }, 1000)
+})
 
 	/* gsap.to('.life__content__circle', {
 		scrollTrigger: {
@@ -14,4 +18,3 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		scale: 1,
 		duration: 0.6,
 	}) */
-})
