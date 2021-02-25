@@ -1,5 +1,5 @@
 body {
-	font-family: 'MonumentGrotesk';
+	font-family: 'Garnett';
 	color: #1d1d1f;
 }
 
@@ -42,6 +42,7 @@ body {
 	overflow: hidden;
 	font-size: 90px;
 	font-weight: 600;
+  text-transform: uppercase;
 }
 
 .hero__figure {
@@ -170,7 +171,8 @@ body {
 .life__text {
 	max-width: 340px;
 	font-size: 18px;
-	line-height: 22px;
+	line-height: 26px;
+  letter-spacing: 0.05em;
 	opacity: 0.5;
 }
 
