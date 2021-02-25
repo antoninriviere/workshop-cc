@@ -1,4 +1,4 @@
 # Workshop intro creative coding 2K21
 
 ## Présentation
-[Slides] (https://slides.com/antonin_rvr/deck)
+Slides [https://slides.com/antonin_rvr/deck](https://slides.com/antonin_rvr/deck)
