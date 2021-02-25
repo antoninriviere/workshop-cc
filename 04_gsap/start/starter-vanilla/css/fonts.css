@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "MonumentGrotesk";
+  src: url("../fonts/MonumentGrotesk-Regular.woff") format("woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "MonumentGrotesk";
+  src: url("../fonts/MonumentGrotesk-Medium.woff") format("woff");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "MonumentGrotesk";
+  src: url("../fonts/MonumentGrotesk-Bold.woff") format("woff");
+  font-weight: 700;
+}
