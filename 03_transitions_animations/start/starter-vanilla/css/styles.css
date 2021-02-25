@@ -1,0 +1,202 @@
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fffdef;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+}
+
+.text {
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  font-family: 'texgyreheros';
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 54px;
+  color: #292a2c;
+}
+
+.line--1, .line--2, .line--3,  .line--4 {
+  position: relative;
+}
+
+.socials {
+  margin-top: 100px;
+}
+
+.socials > a {
+  margin-right: 70px;
+  text-transform: uppercase;
+  color: #292a2c;
+  text-decoration: none;
+  font-family: 'texgyreheros';
+  font-size: 30px;
+  letter-spacing: 0.02em;
+}
+
+.socials > a:last-child {
+  margin-right: 0;
+}
+
+/* Twitter */
+
+.socials__twitter {
+  position: relative;
+}
+
+.socials__twitter::before {
+  content: '';
+  /* 1 Faire quelquechose de 2px en height et toute la width (100%) : */
+  height: 2px;
+  width: 100%;
+  /* 2 Le positionner en absolute à 50% de son parent et à 0 à gauche */
+  position: absolute;
+  left: 0;
+  top: 50%;
+  /* Pour voir votre ligne il faut une couleur de background */
+  background: #292a2c;
+
+  /* Ajouter une transformation  pour faire disparaître le trait (ex en scaleX) */
+  transform: scaleX(0);
+  /* Ajouter une transition pour voir le trait se tracer */
+  transition: transform 0.6s cubic-bezier(0.87, 0, 0.13, 1);
+  transform-origin: top right;
+}
+
+.socials__twitter:hover::before {
+  /* Ajouter une transformation  pour faire appaeraître le trait */
+  transform: scaleX(1);
+  transition: transform 0.6s cubic-bezier(0.87, 0, 0.13, 1);
+  /* transform origin différent */
+  transform-origin: top left;
+}
+
+/* Dribbble */
+
+.socials__dribbble {
+  position: relative;
+}
+
+.socials__dribbble__bbal-1, .socials__dribbble__bbal-2, .socials__dribbble__bbal-3 {
+  position: absolute;
+  top: -90px;
+  opacity: 0;
+}
+
+.socials__dribbble__bbal-1 {
+  left: 10%;
+  animation-duration: 1s;
+}
+
+.socials__dribbble__bbal-2 {
+  left: 38%;
+  animation-duration: 0.8s;
+}
+
+.socials__dribbble__bbal-3 {
+  left: 78%;
+  animation-duration: 1s;
+}
+
+.socials__dribbble:hover .socials__dribbble__bbal-1, .socials__dribbble:hover .socials__dribbble__bbal-2, .socials__dribbble:hover .socials__dribbble__bbal-3 {
+  animation-name: bounceBall;
+}
+
+@keyframes bounceBall {
+  0% {
+    transform: translateY(0%);
+    opacity: 0;
+  }
+
+  12% {
+    transform: translateY(10.89px);
+  }
+
+  24% {
+    transform: translateY(43.56px);
+  }
+
+  36% {
+    transform: translateY(98.01px);
+    opacity: 1;
+  }
+
+  54% {
+    transform: translateY(75.02px);
+  }
+
+  74% {
+    transform: translateY(98.37px);
+  }
+
+  82% {
+    transform: translateY(93.75px);
+  }
+
+  92% {
+    transform: translateY(99.34px);
+  }
+
+  96% {
+    transform: translateY(98.46px);
+  }
+
+  100% {
+    transform: translateY(100px);
+    opacity: 1;
+  }
+}
+
+/* Phone */
+
+.socials__call span {
+  display: inline-block;
+  margin-left: 10px;
+
+  /* animation qui appelle la keyframe */
+  animation-name: shake;
+  animation-duration: 0.75s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/* keyframe avec plusieurs etapes */
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  80% { transform: rotate(0deg); }
+  85% { transform: rotate(15deg); }
+  95% { transform: rotate(-15deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* spinning text */
+.textcircle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  display: block;
+  font-family: 'texgyreheros';
+  font-size: 30px;
+  letter-spacing: 15px;
+  text-transform: uppercase;
+
+  animation-name: spin;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

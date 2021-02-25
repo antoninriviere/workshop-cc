@@ -1,0 +1,55 @@
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fffdef;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+}
+
+.text {
+  font-family: 'texgyreheros';
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 0;
+}
+
+.text .space {
+  margin-right: 15px;
+}
+
+.text > span {
+  display: inline-block;
+  font-size: 54px;
+  color: #292a2c;
+
+  transition: color 3s 1s, transform 0.5s 0s;
+}
+
+.text > span:hover {
+  transform: scale(1.2);
+  transition: color 0s, transform 0.5s;
+}
+
+.text > span.color--1:hover {
+  color: #FF8A47;
+}
+.text > span.color--2:hover {
+  color: #8CEEEE;
+}
+.text > span.color--3:hover {
+  color: #FC6170;
+}
+.text > span.color--4:hover {
+  color: #e59de6;
+}
+.text > span.color--5:hover {
+  color: #FFD747;
+}
