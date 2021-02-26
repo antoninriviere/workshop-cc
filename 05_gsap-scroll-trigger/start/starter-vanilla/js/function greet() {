@@ -1,5 +1,0 @@
-function greet() {
-  console.log('salut')
-}
-
-greet()
