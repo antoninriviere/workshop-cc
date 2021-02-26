@@ -1,0 +1,35 @@
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f76c6c;
+}
+
+.circle {
+  position: relative;
+  width: 600px;
+  height: 600px;
+}
+
+.circle-point {
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  display: block;
+  border-radius: 50%;
+  background: white;
+
+  opacity: 0.5
+}
+
+.circle-point.big {
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+}
